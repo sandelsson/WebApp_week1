@@ -6,7 +6,7 @@ document.getElementById("add-comment").onclick = function () {
   document.getElementById("list").appendChild(node);
 };
 
-document.getElementById("clear-list").onclick = function () {
+document.getElementById("remove-comments").onclick = function () {
   var txt;
   var r = confirm("Are you sure you want to clear the list?");
   if (r === true) {
