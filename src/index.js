@@ -1,28 +1,27 @@
 document.getElementById("add-comment").onclick = function () {
-  //creating new comment-class
-  var commentDIV = document.createElement("div");
-  commentDIV.className = "comment";
-  commentDIV.id = "comment";
-  document.body.appendChild(commentDIV);
+  var all_comments = document.getElementById("comments");
+  var comment = document.createElement("div");
+  //all_comments.appendChild(comment);
 
-  //creating child element for rate-restaurant
-  var newDiv = document.createElement("div");
-  var rate = document.getElementById("rate-restaurant").value;
-  var ratenode = document.createTextNode(rate);
-  //document.body.appendChild(ratenode);
-  newDiv.appendChild(ratenode);
-  ratenode.className = "comment-rating";
-  document.getElementById("comment").appendChild(newDiv);
+  var comment_rating_div = document.createElement("div");
+  var comment_rating_textnode = document.createTextNode(
+    document.getElementById("rate-restaurant").value
+  );
+  comment_rating_div.appendChild(comment_rating_textnode);
+  comment.appendChild(comment_rating_div);
 
-  //creating child element for rate-text
-  var newDiv2 = document.createElement("div");
-  var rate_text = document.getElementById("user_input").value;
-  var rate_textnode = document.createTextNode(rate_text);
-  newDiv2.appendChild(rate_textnode);
-  rate_textnode.className = "comment-text";
-  document.getElementById("comment").appendChild(newDiv2);
+  var comment_text_div = document.createElement("div");
+  var comment_text_textnode = document.createTextNode(
+    document.getElementById("user_input").value
+  );
+  comment_text_div.appendChild(comment_text_textnode);
+  comment.appendChild(comment_text_div);
+
+  all_comments.appendChild(comment);
 };
-
+//tässä kohtaa oon jo vääntäny niin kauan tätä paskaa, että kun
+//mulla oli varmaa 100 rivii kommentoituna tätä funktioo
+//ni poistin kaikki, suljin kaikki välilehdet ja kirjotin ykkösellä oikein koko koodin
 document.getElementById("remove-comments").onclick = function () {
   var txt;
   var r = confirm("Are you sure you want to clear the list?");
