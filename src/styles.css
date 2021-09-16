@@ -22,3 +22,7 @@ body {
   max-width: 740px;
   margin: auto;
 }
+
+.header {
+  font: italic;
+}
