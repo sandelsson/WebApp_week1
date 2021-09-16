@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+  </head>
   <style>
     table,
     td,
@@ -9,42 +12,57 @@
     }
   </style>
   <body>
-    <div id="app"></div>
-    <h1>Hello World!</h1>
-    <table style="width: 100%;">
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Burger</td>
-        <td>7,99€</td>
-      </tr>
-      <tr>
-        <td>Steak</td>
-        <td>8,90€</td>
-      </tr>
-      <tr>
-        <td>Salad</td>
-        <td>4,99€</td>
-      </tr>
-      <tr>
-        <td>Soup</td>
-        <td>5,99€</td>
-      </tr>
-      <tr>
-        <td>Wings</td>
-        <td>10,00€</td>
-      </tr>
-    </table>
-    <br /><br />
-    <br />
-    <textarea name="userinput" id="user_input" cols="30" rows="2"></textarea>
-    <input type="button" value="add to list" id="add-comment" />
-    <input type="button" value="clear list" id="remove-comments" />
-    <p id="demo"></p>
-    <ul id="list"></ul>
+    <div class="menu-layout">
+      <h1>Hello World!</h1>
+      <table style="width: 100%;" id="menu-table">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Burger</td>
+          <td>7,99€</td>
+        </tr>
+        <tr>
+          <td>Steak</td>
+          <td>8,90€</td>
+        </tr>
+        <tr>
+          <td>Salad</td>
+          <td>4,99€</td>
+        </tr>
+        <tr>
+          <td>Soup</td>
+          <td>5,99€</td>
+        </tr>
+        <tr>
+          <td>Wings</td>
+          <td>10,00€</td>
+        </tr>
+      </table>
+      <br />
 
-    <script src="src/index.js"></script>
+      <label for="ratings">Rate the restaurant:</label>
+
+      <select name="rating" id="rate-restaurant">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br />
+      <textarea name="userinput" id="user_input" cols="30" rows="2"></textarea>
+      <br />
+      <input type="button" value="add comment" id="add-comment" />
+      <input type="button" value="remove comments" id="remove-comments" />
+      <p id="demo"></p>
+      <ul id="list"></ul>
+
+      <script src="src/index.js"></script>
+    </div>
+    <div class="comment" id="comment">
+      <div class="comment-rating"></div>
+      <div class="comment-text"></div>
+    </div>
   </body>
 </html>

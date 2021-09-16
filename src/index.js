@@ -1,9 +1,22 @@
 document.getElementById("add-comment").onclick = function () {
-  var node = document.createElement("Li");
-  var text = document.getElementById("user_input").value;
-  var textnode = document.createTextNode(text);
-  node.appendChild(textnode);
-  document.getElementById("list").appendChild(node);
+  //creating new comment-class
+  var commentDIV = document.createElement("div");
+  document.body.appendChild(commentDIV);
+
+  //creating child element for rate-restaurant
+  var newDiv = document.createElement("div");
+  var rate = document.getElementById("rate-restaurant").value;
+  var ratenode = document.createTextNode(rate);
+  //document.body.appendChild(ratenode);
+  newDiv.appendChild(ratenode);
+  document.getElementById("comment").appendChild(newDiv);
+
+  //creating child element for rate-text
+  var newDiv2 = document.createElement("div");
+  var rate_text = document.getElementById("user_input").value;
+  var rate_textnode = document.createTextNode(rate_text);
+  newDiv2.appendChild(rate_textnode);
+  document.getElementById("comment").appendChild(newDiv2);
 };
 
 document.getElementById("remove-comments").onclick = function () {
