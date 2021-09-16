@@ -1,6 +1,8 @@
 document.getElementById("add-comment").onclick = function () {
   //creating new comment-class
   var commentDIV = document.createElement("div");
+  commentDIV.className = "comment";
+  commentDIV.id = "comment";
   document.body.appendChild(commentDIV);
 
   //creating child element for rate-restaurant
@@ -9,6 +11,7 @@ document.getElementById("add-comment").onclick = function () {
   var ratenode = document.createTextNode(rate);
   //document.body.appendChild(ratenode);
   newDiv.appendChild(ratenode);
+  ratenode.className = "comment-rating";
   document.getElementById("comment").appendChild(newDiv);
 
   //creating child element for rate-text
@@ -16,6 +19,7 @@ document.getElementById("add-comment").onclick = function () {
   var rate_text = document.getElementById("user_input").value;
   var rate_textnode = document.createTextNode(rate_text);
   newDiv2.appendChild(rate_textnode);
+  rate_textnode.className = "comment-text";
   document.getElementById("comment").appendChild(newDiv2);
 };
 
